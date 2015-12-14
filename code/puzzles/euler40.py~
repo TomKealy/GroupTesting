@@ -1,0 +1,6 @@
+n, d = 1, '1'
+while(len(d)<=580): #Increase the number to generate a 'bigger' series
+    n += 1
+    d += str(n)
+        
+print d[577] #Change to get value of any term

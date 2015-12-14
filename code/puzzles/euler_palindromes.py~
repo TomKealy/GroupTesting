@@ -1,0 +1,4 @@
+import numpy as np
+
+palindromes = []  # store palindromes here
+

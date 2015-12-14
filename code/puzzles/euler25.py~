@@ -1,0 +1,19 @@
+def fib(n):
+    if n == 1:
+        return 1
+    elif n == 2:
+        return 1
+    else:
+        return fib(n-1) + fib(n-2)
+
+def num_digits(n):
+    digits = 0
+    while n:
+        digits += 1
+        n = n/10
+    return digits
+
+i = 12
+while num_digits(fib(i)) <= 1000:
+    i += 1
+    print i

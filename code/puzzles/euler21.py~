@@ -1,0 +1,10 @@
+def divisors(n):
+    "returns a list of the proper divisors of n"
+    divisors = []
+    d = 0
+    while d*d < n:
+        if n%d == 0:
+            divisors.append(d)
+        d += 1
+    return divisors
+

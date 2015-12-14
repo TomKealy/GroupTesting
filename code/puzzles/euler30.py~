@@ -1,0 +1,8 @@
+def digits(n):
+    "get the digits of n"
+    s = 0
+    while n:
+        d = n%10
+        s += d**4
+        n = n/10
+    return s

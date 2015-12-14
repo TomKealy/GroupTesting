@@ -1,0 +1,15 @@
+def collatz(n):
+    "returns a list of the collatz seq of n"
+    coll = []
+    while n != 1:
+        coll.append(n)
+        if n % 2 == 0:
+            n = n/2
+        else:
+            n = 3*n+1
+    coll.append(1)
+    return coll
+
+lengths = []
+for i in range(1000000):
+    lengths.append(i, len(collatz(i)))

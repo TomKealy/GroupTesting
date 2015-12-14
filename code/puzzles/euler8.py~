@@ -1,0 +1,4 @@
+def read_ints(filename):
+    with open(filename) as f:
+        return [int(x) for x in f]
+

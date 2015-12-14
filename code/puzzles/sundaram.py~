@@ -1,0 +1,3 @@
+def sundaram(n):
+    """Sundaram's sieve to find the primes up to n"""
+    nums = range(2, n , 2)

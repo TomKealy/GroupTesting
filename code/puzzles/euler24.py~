@@ -1,0 +1,24 @@
+def lexigraphic_permutations(digit_list):
+    "Takes a list of digits as input and returns all permutations in lex order"
+    ">>>[0, 1, 2]"
+    "[012, 021, 102, 120, 201, 210]"
+    digit_list = sorted(digit_list)
+    perms = []
+    perms.append(digit_list)
+    while True:
+        i = len(digit_list) - 2
+        while i >= 0:
+            if digit_list[i-1] < digit_list[i]: break
+            i -= 1
+        if i < 0:
+            break
+    
+        j = len(digit_list) - 1
+        while digit_list[j] <= digit_list[i]:
+            j -= 1
+
+        digit_list[i], digit_list[j] = digit_list[j], digit_list[i]
+
+        digit_list[:i+1] = digit_list[:i+1] + digit_list[i+1:][::-1]
+        perms.append(digit_list)
+    return perms

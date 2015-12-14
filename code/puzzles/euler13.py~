@@ -1,0 +1,2 @@
+with open('euler13.txt') as f:
+    content = f.readlines()

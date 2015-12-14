@@ -1,0 +1,11 @@
+def primes(a):
+    for x in a:
+        comp=[]
+        for y in range(a.index(x),len(a)):
+            q=x*a[y]
+            if q&lt;=max(a):
+                comp.append(q)
+            else:
+                break
+        for z in comp:
+            a.remove(z)
